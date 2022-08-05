@@ -3,6 +3,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>Select</th>
                     <th>First name</th>
                     <th>Last name</th>
                     <th>Email</th>
@@ -15,6 +16,7 @@
             </thead>
             <tbody>               
                 <tr v-for="user in usersdata" :key="user.id">
+                    <td><input type="checkbox"  name="mycheckbox"/></td>
                     <td>{{user.first_name}}</td>
                     <td>{{user.last_name}}</td>
                     <td>{{user.email}}</td>
@@ -22,7 +24,7 @@
                     <td>{{user.country}}</td>
                     <td>{{user.birth_date}}</td>
                     <td>{{user.job}}</td>
-                    <td><Button text="Delete"></Button></td>
+                    <td><i @click="$emit('user-delete',user.id)" class="fa fa-trash-o" style="font-size:36px"></i></td>
                 </tr>
             </tbody>
                 
@@ -31,16 +33,20 @@
 </template>
 
 <script>
-import Button from './Button.vue'
     export default{
         name : 'Datatable',
+
         components: {
-    Button,
-},
-        props:{
-            usersdata:Array
-        }
-    }
+    },
+
+    props:{
+        usersdata:Array
+    },
+
+    
+
+   
+}
 
 </script>
 
@@ -49,12 +55,17 @@ import Button from './Button.vue'
 table{
     margin:auto;
     border-collapse: collapse;
-    width:90%;
+    width:95%;
 
 }
 
+
+
 tbody{
     background: white;
+}
+i{
+    cursor: pointer;
 }
 
 th{

@@ -1,8 +1,10 @@
 <template>
   <div>
-    <Header text="User managment"></Header>
-    <UserAdder></UserAdder>
-    <Datatable :usersdata="userdata"></Datatable>
+    <Header @show-user-adder="showUserAdder" @delete-users="usersDelete" text="User managment" :showUserAdd="showUserAdd"></Header>
+    <div v-if="showUserAdd">
+    <UserAdder @user-add="addUser"></UserAdder>
+    </div>
+    <Datatable  :usersdata="userdata" @user-delete="deleteUser"></Datatable>
 
     
   </div>
@@ -14,7 +16,6 @@ import Header from './components/Header.vue'
 import Datatable from './components/Datatable.vue'
 import UserAdder from './components/UserAdder.vue'
 
-import {users} from '../users.js'
 
 export default {
   name: 'App',
@@ -26,10 +27,59 @@ export default {
 
   data(){
     return{
-        userdata : users
-    }
-
+        userdata : [],
+        showUserAdd: false
+  }
   },
+
+  methods:{
+      showUserAdder(){
+        this.showUserAdd = !this.showUserAdd;
+      },
+
+      async deleteUser(id){
+        if(confirm('Are you shure?')){
+          const res = await fetch(`api/users/${id}`,{
+            method : 'DELETE'
+          })
+
+          res.status === 200 ? ( 
+          this.userdata = this.userdata.filter((user) => user.id !== id)
+          ):alert('Error deleting the user')
+
+        }
+      },
+
+      usersDelete(){
+        console.log('valami')
+      },
+
+      async addUser(user){
+        const res = await fetch('api/users', {
+          method : 'POST',
+          headers :{
+          'Content-type': 'application/json'
+          },
+          body:JSON.stringify(user)
+        })
+
+        const data = await res.json()
+
+        this.userdata = [...this.users,data]
+      },
+
+      async fetchUsers(){
+        const res = await fetch("api/users")
+
+        const data = await res.json()
+
+        return data
+      }
+    },
+
+    async created(){
+      this.userdata = await this.fetchUsers()
+    }
 
   
 
