@@ -4,6 +4,7 @@
     <div v-if="showUserAdd">
     <UserAdder @user-add="addUser"></UserAdder>
     </div>
+    <h2>All users: {{usersnum}}</h2>
     <Datatable  :usersdata="userdata" @user-delete="deleteUser"></Datatable>
 
     
@@ -30,6 +31,15 @@ export default {
         userdata : [],
         showUserAdd: false
   }
+  },
+   computed: {
+    usersnum(){
+        //iteralsz
+        if(this.userdata)
+          return this.userdata.length
+        else
+          return 0
+    }
   },
 
   methods:{

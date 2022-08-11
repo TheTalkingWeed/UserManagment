@@ -3,7 +3,6 @@
         <table>
             <thead>
                 <tr>
-                    <th>Select</th>
                     <th>First name</th>
                     <th>Last name</th>
                     <th>Email</th>
@@ -11,12 +10,11 @@
                     <th>Country</th>
                     <th>Born date</th>
                     <th>Job</th>  
-                    <th></th>  
+                    <th>Delete</th>  
                 </tr>
             </thead>
             <tbody>               
                 <tr v-for="user in usersdata" :key="user.id">
-                    <td><input type="checkbox"  name="mycheckbox"/></td>
                     <td>{{user.first_name}}</td>
                     <td>{{user.last_name}}</td>
                     <td>{{user.email}}</td>
@@ -24,7 +22,7 @@
                     <td>{{user.country}}</td>
                     <td>{{user.birth_date}}</td>
                     <td>{{user.job}}</td>
-                    <td><i @click="$emit('user-delete',user.id)" class="fa fa-trash-o" style="font-size:36px"></i></td>
+                    <td class="icon-holder"><img @click="$emit('user-delete',user.id)" src="../assets/trash.png" alt="Delete"/></td>
                 </tr>
             </tbody>
                 
@@ -51,6 +49,11 @@
 </script>
 
 <style scoped>
+
+.icon-holder{
+    display: flex;
+    justify-content: center;
+}
 
 table{
     margin:auto;

@@ -1,46 +1,6 @@
 {
   "users": [
     {
-      "id": 2,
-      "first_name": "Cyril",
-      "last_name": "Barton",
-      "email": "cbarton1@reverbnation.com",
-      "phone_number": "133-126-1310",
-      "country": "Russia",
-      "birth_date": "3/3/1995",
-      "job": "Product Engineer"
-    },
-    {
-      "id": 3,
-      "first_name": "Benni",
-      "last_name": "Spreadbury",
-      "email": "bspreadbury2@behance.net",
-      "phone_number": "300-700-9750",
-      "country": "Japan",
-      "birth_date": "11/10/1990",
-      "job": "Nurse"
-    },
-    {
-      "id": 4,
-      "first_name": "Gavin",
-      "last_name": "Durn",
-      "email": "gdurn3@epa.gov",
-      "phone_number": "923-753-2557",
-      "country": "Indonesia",
-      "birth_date": "4/23/1984",
-      "job": "Design Engineer"
-    },
-    {
-      "id": 5,
-      "first_name": "Tiebold",
-      "last_name": "Fer",
-      "email": "tfer4@feedburner.com",
-      "phone_number": "457-599-9256",
-      "country": "China",
-      "birth_date": "7/2/1998",
-      "job": "Cost Accountant"
-    },
-    {
       "id": 6,
       "first_name": "Margarete",
       "last_name": "Paddon",
@@ -49,16 +9,6 @@
       "country": "Indonesia",
       "birth_date": "3/18/1989",
       "job": "Human Resources Manager"
-    },
-    {
-      "id": 7,
-      "first_name": "Suellen",
-      "last_name": "Sheepy",
-      "email": "ssheepy6@booking.com",
-      "phone_number": "567-479-3955",
-      "country": "China",
-      "birth_date": "7/11/1981",
-      "job": "Account Coordinator"
     },
     {
       "id": 8,
@@ -399,16 +349,6 @@
       "country": "Madagascar",
       "birth_date": "9/16/1983",
       "job": "Sales Representative"
-    },
-    {
-      "id": 43,
-      "first_name": "Leonardo",
-      "last_name": "Shippard",
-      "email": "lshippard16@digg.com",
-      "phone_number": "544-214-1938",
-      "country": "Indonesia",
-      "birth_date": "9/25/1995",
-      "job": "Recruiting Manager"
     },
     {
       "id": 44,

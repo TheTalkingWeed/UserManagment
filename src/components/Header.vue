@@ -1,8 +1,8 @@
 <template>
     <div class="wrapper">
         <h2>{{text}}</h2>
-        <Button @btn-click="$emit('delete-users')" text="Delete selected users" color="red" style="width:240px"></Button>
         <Button @btn-click="$emit('show-user-adder')" :text="showUserAdd ? 'Close' : 'Add user'" :color="showUserAdd ? 'red' : 'green' "></Button>
+        
          
     </div>
 </template>
@@ -21,7 +21,9 @@ import Button from './Button.vue'
         props:{
             text:String,
             showUserAdd:Boolean
-        }
+        },
+
+       
     }
 </script>
 
