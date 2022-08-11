@@ -1,36 +1,6 @@
 {
   "users": [
     {
-      "id": 6,
-      "first_name": "Margarete",
-      "last_name": "Paddon",
-      "email": "mpaddon5@friendfeed.com",
-      "phone_number": "954-808-3199",
-      "country": "Indonesia",
-      "birth_date": "3/18/1989",
-      "job": "Human Resources Manager"
-    },
-    {
-      "id": 8,
-      "first_name": "Willamina",
-      "last_name": "Ferres",
-      "email": "wferres7@163.com",
-      "phone_number": "250-938-8123",
-      "country": "Poland",
-      "birth_date": "9/7/1984",
-      "job": "Nuclear Power Engineer"
-    },
-    {
-      "id": 9,
-      "first_name": "Filberto",
-      "last_name": "Wims",
-      "email": "fwims8@accuweather.com",
-      "phone_number": "895-942-2897",
-      "country": "Indonesia",
-      "birth_date": "12/27/1985",
-      "job": "Legal Assistant"
-    },
-    {
       "id": 10,
       "first_name": "Sammy",
       "last_name": "Hallet",
